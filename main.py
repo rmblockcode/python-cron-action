@@ -4,7 +4,6 @@ import os
 try:
     API_URL = os.environ["API_URL"]
     API_KEY = os.environ["API_KEY"]
-    print('API key', API_KEY)
     TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
     CHAT_ID = os.environ["CHAT_ID"]
 except KeyError as e:
@@ -37,7 +36,7 @@ def get_balance_job():
 
 def get_common_symbol():
     print('Getting common symbol info...')
-    header = {'x-api-key': API_KEY}
+    header = {'x-api-header': API_KEY}
     response = requests.get(f'{API_URL}common_symbol/BTC-USDT', headers=header)
 
     if response.status_code == 200:
