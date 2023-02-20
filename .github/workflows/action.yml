@@ -31,7 +31,7 @@ jobs:
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: python main.py
 
-      timezone: America/New_York
+    timezone: America/New_York
           
       # - name: commit files
       #   run: |
