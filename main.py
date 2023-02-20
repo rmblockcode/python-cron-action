@@ -4,6 +4,7 @@ import os
 try:
     API_URL = os.environ["API_URL"]
     API_KEY = os.environ["API_KEY"]
+    print('API key', API_KEY)
     TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
     CHAT_ID = os.environ["CHAT_ID"]
 except KeyError as e:
