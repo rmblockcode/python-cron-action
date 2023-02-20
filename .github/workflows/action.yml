@@ -2,7 +2,7 @@ name: Cron Job With Action
 
 on:
   schedule:
-    - cron: '* * * * *' # Every minute
+    - cron: '*/5 * * * *' # Every minute
 
 jobs:
   build:
