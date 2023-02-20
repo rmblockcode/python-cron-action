@@ -25,6 +25,7 @@ def tel_send_message(text):
 def get_balance_job():
     print('Getting Balance...')
     header = {'x-api-key': API_KEY}
+    print(str(header))
     response = requests.get(f'{API_URL}balance', headers=header)
     result = response.json()
     text = f'Balance result: \n {result}'
@@ -33,6 +34,7 @@ def get_balance_job():
 def get_common_symbol():
     print('Getting common symbol info...')
     header = {'x-api-key': API_KEY}
+    print(str(header))
     response = requests.get(f'{API_URL}common_symbol/BTC-USDT', headers=header)
     result = response.json()
     text = f'Common symbol result: \n {result}'
